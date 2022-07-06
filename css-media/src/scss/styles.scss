@@ -1,0 +1,125 @@
+$color-font: #ff5500;
+$color-bg-default: rgb(255, 255, 255);
+$font-default: Arial, Helvetica, sans-serif;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#root {
+    min-width: 430px;
+    overflow: hidden;
+}
+
+body {
+    font-family: $font-default;
+    margin: 0;
+}
+
+#main-container {
+    margin: 20px 20px;
+    .truck-animation {
+        position: absolute;
+        margin-top: -3rem;
+    }
+   h1 {
+        margin-top: 2rem;
+        margin-left: 3.3rem;
+        font-size: x-large;
+        position: relative;
+        color: #ff5500;
+        z-index: 3;
+        animation: truck-run 3s forwards;
+    }
+   .truck {
+        position: absolute;
+        animation: truck-run 3s forwards;
+    }
+    .fone {
+        position: relative;
+        margin-left: 4.5rem;
+        z-index: 1;
+        color: $color-bg-default;
+        animation: truck-run 3s forwards;
+    }
+}
+
+#imagens {
+    .container-image {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        max-width: 100%;
+        margin: 0 auto;
+        
+        img {
+            height: 280px;
+            width: 400px;
+            margin: 15px;
+            object-fit: fill;
+            object-position: bottom;
+            border: 1px solid #333;
+
+            &:hover {
+                opacity: 75%;
+                border-color: #33f;
+            }
+        }
+    }
+}
+header {
+    background-image: url(../assets/images/pexels-mudanca.jpg);
+    background-repeat: round;
+    width: 100%;
+    position: relative;
+    height: auto;
+    overflow: hidden;
+
+    .faixa {
+        margin-bottom: -.5rem;
+
+        .faixa-orange {
+            position: relative;
+            animation: orange-color 3s 0s ease-in-out;
+        }
+    }
+}
+
+#footer-description {
+    background-color: #000b76;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    
+    .footer-address {
+        color: $color-bg-default;
+        a {
+            color: #ff5500;
+            text-decoration: none;
+        }
+    }
+}
+
+@keyframes truck-run {
+    from { left: -20rem}
+    to { left: 5rem}
+}
+
+@keyframes orange-color {
+    from { opacity: 0;}
+    to { opacity: 9;}
+}
+
+
+@media (max-width: 780px) {
+   #vetoriais {
+    width: 110%;
+   }
+}
+
+
+
+@import 'player';
+@import 'carrosel';

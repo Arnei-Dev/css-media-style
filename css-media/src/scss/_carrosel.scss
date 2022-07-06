@@ -1,0 +1,41 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+#carrosel {
+    background-color: rgba($color: rgb(246, 242, 242), $alpha: .5);
+    width: 100%;
+    height: auto;
+    text-align: center;
+    margin: 40px 0;
+
+}
+
+.carrosel_list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+
+        .carrosel_list-item {
+            background-color: white;
+            list-style: none;
+            width: 320px;
+            height: 280px;
+            border-radius: 10px;
+            margin: 50px;
+            box-shadow: 25px 25px 15px rgb(102, 101, 101);
+
+            h4{
+                padding-top: 10px;
+                padding-bottom: 40px;
+            }
+        }
+
+}
+
+@keyframes item {
+    from { opacity: 0;}
+    to { opacity: 9;}
+}
